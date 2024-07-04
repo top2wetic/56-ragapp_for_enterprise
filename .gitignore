@@ -1,0 +1,14 @@
+static/
+storage/
+
+**/__pycache__/
+
+**/.env
+
+data/
+node_modules/
+create_llama/
+ollama/
+tool-output/
+
+!config/*
