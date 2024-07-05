@@ -102,8 +102,7 @@ export default function Home() {
             Congratulations 🎉
           </DialogTitle>
           <DialogDescription>
-            You have successfully installed RAGapp. Now, let&apos;s go ahead and
-            configure it.
+           You have successfully configured DIGITAR Advanced RAG application . 
           </DialogDescription>
         </DialogContent>
       </Dialog>
