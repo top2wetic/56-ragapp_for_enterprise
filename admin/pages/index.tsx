@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     // Vérifiez l'état de connexion au chargement du composant
-    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (!isLoggedIn) {
       router.push("/login"); // Rediriger vers la page de connexion
     }
