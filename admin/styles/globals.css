@@ -4,67 +4,67 @@
 
 @layer base {
   :root {
-    --background: 0 0% 97%; /* Légèrement plus clair */
-    --foreground: 220 20% 10%; /* Couleur de texte sombre pour un bon contraste */
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%; /* Couleur blanche pour les cartes */
-    --card-foreground: 220 20% 10%; /* Texte sombre sur les cartes */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --section: 0 0% 100%; /* Arrière-plan blanc pour les sections */
+    --section: 0 0% 100%;
 
-    --popover: 0 0% 100%; /* Couleur blanche pour les popovers */
-    --popover-foreground: 220 20% 10%; /* Texte sombre dans les popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 20% 10%; /* Couleur primaire sombre */
-    --primary-foreground: 0 0% 100%; /* Texte blanc sur le fond primaire */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 20% 95%; /* Couleur secondaire claire pour des éléments subtils */
-    --secondary-foreground: 220 20% 10%; /* Texte sombre pour les éléments secondaires */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 220 20% 95%; /* Couleur atténuée pour les éléments non actifs */
-    --muted-foreground: 220 20% 30%; /* Texte sombre mais légèrement plus clair que le texte principal */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 220 20% 95%; /* Couleur accentuée claire */
-    --accent-foreground: 220 20% 10%; /* Texte sombre pour les éléments accentués */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 70% 60%; /* Rouge modéré pour les actions destructrices */
-    --destructive-foreground: 0 0% 100%; /* Texte blanc pour les actions destructrices */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 90%; /* Bordures très claires */
-    --input: 220 20% 97%; /* Fond d'input très clair */
-    --ring: 220 20% 75%; /* Couleur de l'anneau de focus clair */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-    --radius: 0.375rem; /* Rayon des coins plus petit pour un aspect plus moderne */
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 220 20% 10%; /* Fond sombre en mode sombre */
-    --foreground: 220 20% 95%; /* Texte clair en mode sombre */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 20% 15%; /* Cartes plus sombres en mode sombre */
-    --card-foreground: 220 20% 95%; /* Texte clair sur les cartes en mode sombre */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 20% 15%; /* Popovers plus sombres en mode sombre */
-    --popover-foreground: 220 20% 95%; /* Texte clair dans les popovers en mode sombre */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 220 20% 95%; /* Couleur primaire claire en mode sombre */
-    --primary-foreground: 220 20% 10%; /* Texte sombre sur le fond primaire en mode sombre */
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 220 20% 30%; /* Couleur secondaire plus sombre en mode sombre */
-    --secondary-foreground: 220 20% 95%; /* Texte clair pour les éléments secondaires en mode sombre */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 20% 30%; /* Couleur atténuée plus sombre en mode sombre */
-    --muted-foreground: 220 20% 70%; /* Texte clair mais légèrement plus sombre que le texte principal en mode sombre */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 220 20% 30%; /* Couleur accentuée plus sombre en mode sombre */
-    --accent-foreground: 220 20% 95%; /* Texte clair pour les éléments accentués en mode sombre */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 60% 50%; /* Rouge plus doux pour les actions destructrices en mode sombre */
-    --destructive-foreground: 220 20% 95%; /* Texte clair pour les actions destructrices en mode sombre */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 25%; /* Bordures plus sombres en mode sombre */
-    --input: 220 20% 25%; /* Fond d'input plus sombre en mode sombre */
-    --ring: 220 20% 60%; /* Couleur de l'anneau de focus légèrement plus foncée en mode sombre */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
@@ -74,13 +74,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Police sobre et professionnelle */
-    line-height: 1.6; /* Espacement des lignes plus aéré pour une meilleure lisibilité */
   }
   section {
     background-color: hsl(var(--section));
-    padding: 1rem; /* Espacement de section standard */
-    border-radius: var(--radius); /* Coins arrondis pour une meilleure apparence */
   }
   iframe {
     background-color: transparent;
