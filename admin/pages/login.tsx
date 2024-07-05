@@ -11,8 +11,8 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     if (username === "admin" && password === "aze123") {
-      // Stocker l'état de connexion dans sessionStorage
-      sessionStorage.setItem("isLoggedIn", "true");
+      // Stocker l'état de connexion dans localStorage
+      localStorage.setItem("isLoggedIn", "true");
       router.push("/"); // Rediriger vers la page d'accueil
     } else {
       setError("Invalid username or password");
@@ -20,10 +20,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-form">
-        <h1 className="login-title">Welcome to DIGITAR</h1>
-        <p className="login-subtitle">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="p-8 bg-white rounded shadow-md w-80">
+        <h1 className="text-2xl font-bold mb-4 text-center text-blue-600">Welcome to DIGITAR</h1>
+        <p className="text-sm text-gray-500 mb-6 text-center">
           Please log in to access the advanced features of our application.
         </p>
         <div className="mb-4">
@@ -35,8 +35,7 @@ const LoginPage = () => {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="login-input"
-            placeholder="Enter your username"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div className="mb-4">
@@ -48,18 +47,17 @@ const LoginPage = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="login-input"
-            placeholder="Enter your password"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         <button
           onClick={handleLogin}
-          className="login-button"
+          className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
           Login
         </button>
-        <footer className="login-footer">
+        <footer className="mt-6 text-center text-sm text-gray-600">
           <p>Developed with ❤️ by DIGITAR</p>
         </footer>
       </div>
