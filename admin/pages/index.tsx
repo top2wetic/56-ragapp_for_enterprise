@@ -38,6 +38,14 @@ export default function Home() {
     }
   }, [configured]);
 
+  useEffect(() => {
+    // Vérifier l'état de connexion à chaque fois que le composant est monté
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      router.push("/login"); // Rediriger vers la page de connexion
+    }
+  }, [router]);
+
   function handleDialogState(isOpen: boolean) {
     setShowWelcome(isOpen);
     if (!isOpen) {
