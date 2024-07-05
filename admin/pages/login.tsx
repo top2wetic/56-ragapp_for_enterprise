@@ -22,7 +22,10 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="p-8 bg-white rounded shadow-md w-80">
-        <h1 className="text-xl font-bold mb-4 text-center">Login</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center text-blue-600">Welcome to DIGITAR</h1>
+        <p className="text-sm text-gray-500 mb-6 text-center">
+          Please log in to access the advanced features of our application.
+        </p>
         <div className="mb-4">
           <label htmlFor="username" className="block text-sm font-medium mb-1">
             Username
@@ -32,7 +35,7 @@ const LoginPage = () => {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div className="mb-4">
@@ -44,7 +47,7 @@ const LoginPage = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
@@ -54,6 +57,9 @@ const LoginPage = () => {
         >
           Login
         </button>
+        <footer className="mt-6 text-center text-sm text-gray-600">
+          <p>Developed with ❤️ by DIGITAR</p>
+        </footer>
       </div>
     </div>
   );
