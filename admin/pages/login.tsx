@@ -13,7 +13,7 @@ const LoginPage = () => {
     if (username === "admin" && password === "aze123") {
       // Stocker l'état de connexion dans localStorage
       localStorage.setItem("isLoggedIn", "true");
-      router.push("/admin"); // Rediriger vers la page admin
+      router.push("/"); // Rediriger vers la page d'accueil
     } else {
       setError("Invalid username or password");
     }

@@ -25,6 +25,14 @@ export default function Home() {
   const [configured, setConfigured] = useState<boolean>();
 
   useEffect(() => {
+    // Vérifiez l'état de connexion au chargement du composant
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      router.push("/login"); // Rediriger vers la page de connexion
+    }
+  }, [router]);
+
+  useEffect(() => {
     if (router.asPath.split("#")[1] === "new") {
       setShowWelcome(true);
     }
@@ -37,14 +45,6 @@ export default function Home() {
       });
     }
   }, [configured]);
-
-  useEffect(() => {
-    // Vérifier l'état de connexion à chaque fois que le composant est monté
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (!isLoggedIn) {
-      router.push("/login"); // Rediriger vers la page de connexion
-    }
-  }, [router]);
 
   function handleDialogState(isOpen: boolean) {
     setShowWelcome(isOpen);
